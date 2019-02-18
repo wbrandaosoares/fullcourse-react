@@ -1,0 +1,3 @@
+npm install --global gulp-cli
+dentro de assets
+- npm install

@@ -56,6 +56,7 @@ gulp.task('build-js', gulp.series(function() {
                             presets: [
                                 ["@babel/preset-env", {
                                     useBuiltIns: "usage",
+									corejs: "^3.0.0",
                                     targets: {
                                         browsers: SUPPORTED_BROWSERS
                                     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Person from './components/Person/Person';
-
+ 
 class App extends Component {
     state = {
         persons: [

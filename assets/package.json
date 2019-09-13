@@ -13,6 +13,7 @@
         "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
         "@babel/plugin-syntax-class-properties": "^7.2.0",
         "@babel/plugin-transform-regenerator": "^7.4.5",
+        "@babel/polyfill": "^7.6.0",
         "@babel/preset-env": "^7.6.0",
         "@babel/preset-react": "^7.0.0",
         "acorn": "^6.3.0",
@@ -38,10 +39,21 @@
         "webpack-stream": "^5.2.1"
     },
     "dependencies": {
-        "@babel/polyfill": "^7.6.0",
         "react": "^16.9.0",
         "react-dom": "^16.9.0",
         "react-router": "^4.3.1",
         "react-router-dom": "^4.3.1"
-    }
+    },
+    "browserslist": [
+        ">= 1%",
+        "not dead",
+        "Chrome >= 70",
+        "Firefox >= 65",
+        "Edge >= 12",
+        "Explorer >= 11",
+        "iOS >= 11",
+        "Safari >= 11",
+        "Android >= 4.4",
+        "not op_mini all"
+    ]
 }

@@ -1,28 +1,31 @@
 'use strict';
-let gulp			= require('gulp'),
-    sass			= require('gulp-sass'),
-    plumber			= require('gulp-plumber'),
-    sourcemaps		= require('gulp-sourcemaps'),
-    uglify			= require('gulp-uglify-es').default,
-    cleancss		= require('gulp-clean-css'),
-    autoprefixer	= require('gulp-autoprefixer'),
-    named			= require('vinyl-named-with-path'),
+let gulp            = require('gulp'),
+    sass            = require('gulp-sass'),
+    plumber         = require('gulp-plumber'),
+    sourcemaps      = require('gulp-sourcemaps'),
+    uglify          = require('gulp-uglify-es').default,
+    cleancss        = require('gulp-clean-css'),
+    autoprefixer    = require('gulp-autoprefixer'),
+    named           = require('vinyl-named-with-path'),
     webpack         = require('webpack'),
-    webpackStream	= require('webpack-stream');
+    webpackStream   = require('webpack-stream');
 
 // Set the browser that you want to support
 const SUPPORTED_BROWSERS = [
-    ">= 0.35%",
-    "not dead",
-    "iOS >= 11",
-    "Firefox >= 60",
-    "Safari >= 11",
-    "Android >= 4.4",
-    "Opera >= 50"
+    ">= 1%",
+	"not dead",
+	"Chrome >= 70",
+	"Firefox >= 65",
+	"Edge >= 12",
+	"Explorer >= 11",
+	"iOS >= 11",
+	"Safari >= 11",
+	"Android >= 4.4",
+	"not op_mini all"
 ];
 
 gulp.task('build-js', gulp.series(function() {
-    return gulp.src('js/**/*.js')
+    return gulp.src('js/*.js')
     .pipe(plumber({
         handleError: function (err) {
             console.log(err);
@@ -56,12 +59,12 @@ gulp.task('build-js', gulp.series(function() {
                             presets: [
                                 ["@babel/preset-env", {
                                     useBuiltIns: "usage",
-									corejs: "^3.0.0",
+                                    corejs: "^3.0.0",
                                     targets: {
                                         browsers: SUPPORTED_BROWSERS
                                     }
                                 }],
-                                ["@babel/react", {
+                                ["@babel/preset-react", {
                                     useBuiltIns: "usage",
                                     targets: {
                                         browsers: SUPPORTED_BROWSERS
@@ -91,7 +94,7 @@ gulp.task('build-css', gulp.series(function() {
     .pipe(named())
     .pipe(sourcemaps.init({largeFile: true}))  // Process the original sources
     .pipe(sass())
-    .pipe(autoprefixer({browsers: SUPPORTED_BROWSERS}))
+    .pipe(autoprefixer())
     .pipe(cleancss({log:false}))
     .pipe(sourcemaps.write('../../public/maps')) // Add the map to modified source.
     .pipe(gulp.dest('../public/css'));

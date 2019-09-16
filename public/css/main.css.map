@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/css/main.scss"],"names":[],"mappings":"AAAA,SAAS,aAAa,cAAc,gBAAgB,iBAAiB,WAAW,KAAK,gCAAgC,wBAAwB,KAAK,a","file":"css/main.css","sourcesContent":[".produto{padding:10px}.btn-primario{background:#069}.texto-principal{color:#069}.box{-webkit-transform:rotate(30deg);transform:rotate(30deg)}body{padding:40px}"],"sourceRoot":""}

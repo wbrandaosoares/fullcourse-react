@@ -1,0 +1,21 @@
+@import "page/produto.scss";
+// Crio a variável
+$cor-padrao: #069;
+
+.btn-primario {
+    // aqui eu chamo a variável:
+    background: $cor-padrao;
+}
+
+.texto-principal {
+    // chamo aqui também:
+    color: $cor-padrao;
+}
+
+.box {
+    transform: rotate(30deg);
+}
+
+body {
+    padding: 40px;
+}

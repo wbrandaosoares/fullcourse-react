@@ -3,3 +3,4 @@ node_modules
 .idea
 /nbproject/private/
 nbproject
+/package-lock.json

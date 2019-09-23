@@ -1,16 +1,13 @@
-import axios from 'axios';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app/App';
+import * as serviceWorker from './app/serviceWorker';
+
 import '../css/main.scss';
 
-class Api {
-    static async getUserInfo(userName) {
-        try {
-            const response = await axios.get(`https://api.github.com/users/${userName}`);
-            console.log(response);
-            
-        } catch(error) {
-            console.warn('Erro na api');
-        }
-    }
-}
+ReactDOM.render(<App />, document.getElementById('root'));
 
-Api.getUserInfo('diego3g');
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

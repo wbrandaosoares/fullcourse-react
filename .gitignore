@@ -4,3 +4,5 @@ node_modules
 /nbproject/private/
 nbproject
 /package-lock.json
+/public/js/main.js
+/public/js/main.js.map

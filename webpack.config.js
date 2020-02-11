@@ -1,5 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const entryPlus = require('webpack-entry-plus');
+const entryPlus = require("webpack-entry-plus");
 const glob = require('glob');
 
 const entryFiles = [

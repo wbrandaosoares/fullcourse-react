@@ -1,3 +1,9 @@
+@import './Layout/Layout.scss';
+@import './components/Burger/Burger.scss';
+@import './components/Burger/BuildControls/BuildControls.scss';
+@import './components/Burger/BuildControls/BuildControl/BuildControl.scss';
+@import './components/BurgerIngredient/BurgerIngredient.scss';
+
 body {
     margin: 0;
     padding: 0;
